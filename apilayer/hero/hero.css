@@ -1,0 +1,406 @@
+.main-section {
+    background: linear-gradient(135deg, #2480FC 0%, #0052CC 100%);
+    min-height: 1500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.content {
+  position: absolute;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  z-index: 2;
+  top: 15%;
+}
+
+.content h1 {
+  font-size: 75px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #27344a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* background circle */
+.background-circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.circle-1 {
+  width: 750px;
+  height: 750px;
+}
+
+.circle-2 {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  width: 950px;
+  height: 950px;
+}
+
+.circle-3 {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  width: 1150px;
+  height: 1150px;
+}
+
+.circle-4 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  width: 1250px;
+  height: 1250px;
+}
+
+
+
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-1 {
+  top: 20%;
+  left: 3.5%;
+}
+.icon-2 {
+  top: 25%;
+  right: 4%;
+}
+.icon-3 {
+  top: 2%;
+  left: 2%;
+}
+.icon-4 {
+  top: 12%;
+  left: 12%;
+}
+.icon-5 {
+  top: 40%;
+  left: 22%;
+}
+.icon-6 {
+  top: 35%;
+  right: 17%;
+}
+.icon-7 {
+  top: 10%;
+  right: 21%;
+}
+.icon-8 {
+  top: 43.5%;
+  right: 50%;
+}
+
+.icon-round {
+  top: 2%;
+  right: 2%;
+}
+.icon-phone {
+  top: 40%;
+  left: 4.5%;
+}
+.icon-ball {
+  top: 40%;
+  right: 4.5%;
+}
+.number-logo {
+   position: absolute;
+ 
+    top: 56%;
+    left: 11%;
+   
+}
+
+
+.stats-heading {
+  position: absolute;
+  top: 58%;
+  left: 10%;
+  max-width: 500px;
+  max-height: 100px;
+  padding: 10px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 70%;
+  gap: 50px;
+  padding: 10px;
+  width: 100%;
+}
+
+.stat-item {
+    position: relative;
+    width: 380px;
+    height: 320px;
+    margin: 10px;
+    overflow: hidden; 
+    border-radius: 10px;
+
+  }
+  
+  .card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px; /* Ensure the image has the same border radius */
+  }
+  
+  .stat-item h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 72px;
+    color: #27344A; 
+    margin: 0px 20px;
+    margin-top: 50%;
+  }
+  
+  .stat-item h2 span {
+    color: #2480fc; 
+  }
+  
+  .stat-item p {
+    position: relative;
+    z-index: 1; 
+    font-size: 24px;
+    color: #27344A;
+    margin: 0px 20px;
+   
+  }
+  
+
+
+
+
+
+
+
+
+
+
+/* Media Queries for Circles */
+@media screen and (max-width: 768px) {
+  .background-circles {
+    width: 150%;
+    height: 150%;
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-2 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .circle-3 {
+    width: 550px;
+    height: 550px;
+  }
+
+  .circle-4 {
+    width: 650px;
+    height: 650px;
+  }
+}
+
+/* Media Queries for Icons */
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-1 {
+    top: 25%;
+    left: 5%;
+  }
+  
+  .icon-2 {
+    top: 25%;
+    right: 5%;
+  }
+  
+  .icon-3 {
+    top: 5%;
+    left: 15%;
+  }
+  
+  .icon-4 {
+    top: 15%;
+    left: 25%;
+  }
+  
+  .icon-5 {
+    top: 45%;
+    left: 15%;
+  }
+  
+  .icon-6 {
+    top: 35%;
+    right: 15%;
+  }
+  
+  .icon-7 {
+    top: 15%;
+    right: 25%;
+  }
+  
+  .icon-8 {
+    top: 45%;
+    right: 45%;
+  }
+
+  .icon-round {
+    top: 5%;
+    right: 5%;
+  }
+  
+  .icon-phone {
+    top: 45%;
+    left: 5%;
+  }
+  
+  .icon-ball {
+    top: 45%;
+    right: 5%;
+  }
+}
+
+/* For smaller mobile devices */
+
+@media screen and (max-width: 480px) {
+  .background-circles {
+    width: 120%;
+    height: 120%;
+    z-index: 3;
+  }
+
+  .circle-1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-3 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .circle-4 {
+    width: 550px;
+    height: 550px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+  .background-circles {
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle-3 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .circle-4 {
+    width: 500px;
+    height: 500px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}

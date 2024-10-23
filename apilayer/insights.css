@@ -1,0 +1,165 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.insights-section{
+    color: #ffffff;
+    background-color: #1e90ff;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding: 80px;
+    border-radius: 8px;
+}
+
+
+.insights-container {
+   position: relative;
+   
+}
+
+.insights-header {
+    max-width: 50%;
+    margin-bottom: 2rem;
+}
+
+.insights-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.insights-header p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.insights-content-wrapper {
+    position: relative;
+}
+
+.insights-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.insights-card {
+    background-color: #1e80ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+    cursor: pointer;
+}
+
+ .insights-card-tag, .insights-clients-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.insights-clients-tag {
+    margin-bottom: 1.5rem; /* Adds space between the tag and content block */
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.5); /* Different look for 'HEAR FROM CLIENTS' */
+}
+
+.insights-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.insights-card-date {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.insights-card-link {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: #1e90ff 0.3s ease;
+}
+
+.insights-card-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation arrows positioned at step 2 (33% of height) and square-shaped */
+.insights-navigation {
+    position: absolute;
+    top: -33%; /* Positioning at step 2 */
+    right: 8px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.insights-nav-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    width: 40px; /* Square size */
+    height: 40px; /* Square size */
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px; /* Slightly rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.insights-nav-button:hover {
+    background-color: #ffffff;;
+    color: #1e90ff;;
+}
+
+.insights-slider-container {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 1rem;
+}
+
+.insights-slider-fill {
+    height: 100%;
+    background-color: #ffffff;
+    width: 33.33%;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .insights-header {
+        max-width: 100%;
+    }
+
+    .insights-header h1 {
+        font-size: 2rem;
+    }
+
+    .insights-card {
+        flex-basis: 100%;
+    }
+
+    /* Move navigation buttons below the content for mobile */
+    .insights-navigation {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}

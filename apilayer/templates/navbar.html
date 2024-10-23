@@ -1,0 +1,95 @@
+<nav class="navbar">
+    <div class="logo-nav-group">
+        <div class="logo">
+            <img src="/assets/Logo.svg" alt="APILayer Logo" />
+        </div>
+        <div class="apilayer-nav-links">
+            <a href="https://apilayer.com/marketplace" class="nav-item">Marketplace</a>
+            <div class="dropdown">
+                <a href="#" class="nav-item" onclick="toggleDropdown(event, 'resources-dropdown')">
+                    <span>Resources</span>
+                    <img src="/assets/down.svg" alt="Dropdown" />
+                </a>
+                <div id="resources-dropdown" class="dropdown-content">
+                    <a href="https://blog.apilayer.com/">Blogs</a>
+                    <a href="#">White papers</a>
+                    <a href="#">Webinars</a>
+                    <a href="https://apilayer.com/docs/article/marketplace-faq">FAQ</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-item" onclick="toggleDropdown(event, 'community-dropdown')">
+                    <span>Community</span>
+                    <img src="/assets/down.svg" alt="Dropdown" />
+                </a>
+                <div id="community-dropdown" class="dropdown-content">
+                    <a href="https://github.com/public-apis/public-apis">Github</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Workshops</a>
+                    <a href="#">Affiliate</a>
+                </div>
+            </div>
+            <a href="https://github.com/public-apis/public-apis" class="nav-item" style="display: flex; align-items: center; gap: 3px">
+                <img src="/assets/gihub.svg" alt="Repo" style="width: 20px; height: 20px" />
+                <span>Repo</span>
+            </a>
+        </div>
+    </div>
+    <div class="button-group">
+        <a href="https://apilayer.com/signup" class="button sign-up-button">Sign up</a>
+        <a href="#" class="button start-building-button" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <span>Start building</span>
+            <img src="/assets/right.svg" alt="Arrow" />
+        </a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <img src="/assets/mobilemenu.svg" alt="Menu" class="menu-icon" />
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+        <img src="/assets/mobile.svg" alt="APILayer Logo" />
+        <img src="/assets/crossicon.svg" alt="Close" onclick="toggleMenu()" />
+    </div>
+    <div class="mobile-nav-links">
+        <a href="https://apilayer.com/marketplace" class="mobile-nav-item">Marketplace</a>
+        <div class="mobile-dropdown">
+            <a href="#" class="mobile-nav-item" onclick="toggleMobileDropdown(this)">
+                <span>Resources</span>
+                <img src="/assets/mobiledropdown.svg" alt="Dropdown" />
+            </a>
+            <div class="mobile-dropdown-content">
+                <a href="https://blog.apilayer.com/">Blogs</a>
+                <a href="#">White papers</a>
+                <a href="#">Webinars</a>
+                <a href="https://apilayer.com/docs/article/marketplace-faq">FAQ</a>
+            </div>
+        </div>
+        <div class="mobile-dropdown">
+            <a href="#" class="mobile-nav-item" onclick="toggleMobileDropdown(this)">
+                <span>Community</span>
+                <img src="/assets/mobiledropdown.svg" alt="Dropdown" />
+            </a>
+            <div class="mobile-dropdown-content">
+                <a href="https://github.com/public-apis/public-apis">Github</a>
+                <a href="#">Discord</a>
+                <a href="#">Workshops</a>
+                <a href="#">Affiliate</a>
+            </div>
+        </div>
+        <a href="https://github.com/public-apis/public-apis" class="mobile-nav-item">
+            <img src="/assets/mobilegithub.svg" alt="Repo" style="width: 30px; height: 25px" />
+            <span>Repo</span>
+        </a>
+    </div>
+    <hr style="margin-top: 20px" />
+    <div class="mobile-button-group">
+        <a href="https://apilayer.com/signup" class="mobile-button mobile-sign-up-button">Sign up</a>
+        <a href="#" class="mobile-button mobile-start-building-button">
+            <span>Start building</span>
+            <img src="/assets/right.svg" alt="Arrow" />
+        </a>
+    </div>
+</div>

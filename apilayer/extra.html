@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="headercontent.css" />
+    <link rel="stylesheet" href="secondPart.css" />
+    <link rel="stylesheet" href="api.css" />
+    <link rel="stylesheet" href="feature.css" />
+    <link rel="stylesheet" href="powerfulapi.css" />
+    <link rel="stylesheet" href="insights.css" />
+    <title>APILayer Homepage</title>
+  </head>
+
+  <body>
+    <section class="main-section">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <img src="/assets/Logo.svg" alt="APILayer Logo" />
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <img src="/assets/mobilemenu.svg" alt="Menu" class="menu-icon" />
+        </div>
+        <div class="nav-links">
+          <a href="https://apilayer.com/marketplace" class="nav-item"
+            >Marketplace</a
+          >
+
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <a
+              href="#"
+              class="nav-item"
+              onclick="toggleDropdown(event, 'resources-dropdown')"
+            >
+              <span>Resources</span>
+              <img src="/assets/down.svg" alt="Dropdown" />
+            </a>
+            <div id="resources-dropdown" class="dropdown-content">
+              <a href="https://blog.apilayer.com/">Blogs</a>
+              <a href="#">White papers</a>
+              <a href="#">Webinars</a>
+              <a href="https://apilayer.com/docs/article/marketplace-faq"
+                >FAQ</a
+              >
+            </div>
+          </div>
+
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <a
+              href="#"
+              class="nav-item"
+              onclick="toggleDropdown(event, 'community-dropdown')"
+            >
+              <span>Community</span>
+              <img src="/assets/down.svg" alt="Dropdown" />
+            </a>
+            <div id="community-dropdown" class="dropdown-content">
+              <a href="https://github.com/public-apis/public-apis">Github</a>
+              <a href="#">Discord </a>
+              <a href="#">Workshops</a>
+              <a href="#">Affiliate</a>
+            </div>
+          </div>
+
+          <a
+            href="https://github.com/public-apis/public-apis"
+            class="nav-item"
+            style="display: flex; align-items: center; gap: 3px"
+          >
+            <img
+              src="/assets/gihub.svg"
+              alt="Repo"
+              style="width: 20px; height: 20px"
+            />
+            <span>Repo</span>
+          </a>
+
+          <div class="button-group">
+            <a href="https://apilayer.com/signup" class="button sign-up-button"
+              >Sign up</a
+            >
+            <a
+              href="#"
+              class="button start-building-button"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+              "
+            >
+              <span>Start building</span>
+              <img src="/assets/right.svg" alt="Arrow" />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+          <img src="/assets/mobile.svg" alt="APILayer Logo" />
+          <img src="/assets/crossicon.svg" alt="Close" onclick="toggleMenu()" />
+        </div>
+
+        <div class="mobile-nav-links">
+          <a href="https://apilayer.com/marketplace" class="mobile-nav-item"
+            >Marketplace</a
+          >
+
+          <!-- Mobile Dropdown -->
+          <div class="mobile-dropdown">
+            <a
+              href="#"
+              class="mobile-nav-item"
+              onclick="toggleMobileDropdown(this)"
+            >
+              <span>Resources</span>
+              <img src="/assets/mobiledropdown.svg" alt="Dropdown" />
+            </a>
+            <div class="mobile-dropdown-content">
+              <a href="https://blog.apilayer.com/">Blogs</a>
+              <a href="#">White papers</a>
+              <a href="#">Webinars</a>
+              <a href="https://apilayer.com/docs/article/marketplace-faq"
+                >FAQ</a
+              >
+            </div>
+          </div>
+
+          <!-- Mobile Dropdown -->
+          <div class="mobile-dropdown">
+            <a
+              href="#"
+              class="mobile-nav-item"
+              onclick="toggleMobileDropdown(this)"
+            >
+              <span>Community</span>
+              <img src="/assets/mobiledropdown.svg" alt="Dropdown" />
+            </a>
+            <div class="mobile-dropdown-content">
+              <a href="https://github.com/public-apis/public-apis">Github</a>
+              <a href="#">Discord</a>
+              <a href="#">Workshops</a>
+              <a href="#">Affiliate</a>
+            </div>
+          </div>
+
+          <a
+            href="https://github.com/public-apis/public-apis"
+            class="mobile-nav-item"
+          >
+            <img
+              src="/assets/mobilegithub.svg"
+              alt="Repo"
+              style="width: 30px; height: 25px"
+            />
+            <span>Repo</span>
+          </a>
+        </div>
+        <hr style="margin-top: 20px" />
+        <div class="mobile-button-group">
+          <a
+            href="https://apilayer.com/signup"
+            class="mobile-button mobile-sign-up-button"
+            >Sign up</a
+          >
+          <a href="#" class="mobile-button mobile-start-building-button">
+            <span>Start building</span>
+            <img src="/assets/right.svg" alt="Arrow" />
+          </a>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>
+          The answer to your automation
+          <span style="color: #27344a">needs</span>
+        </h1>
+        <p>
+          Connect to 1000s of APIs to build robust solutions for your business
+        </p>
+        <a href="#" class="cta-button"
+          >Browse API Marketplace
+          <img src="/assets/right.svg" alt="right-arrow" />
+        </a>
+      </div>
+
+      <div class="background-circles">
+        <img
+          src="/assets/ellipseone.svg"
+          alt="Circle 1"
+          class="circle circle-1"
+        />
+        <img
+          src="/assets/ellipsetwo.svg"
+          alt="Circle 2"
+          class="cirlce circle-2"
+        />
+        <img
+          src="/assets/ellipsethree.svg"
+          alt="Circle 3"
+          class="circle circle-3"
+        />
+        <img
+          src="/assets/ellipsefour.svg"
+          alt="Circle 4"
+          class="circle circle-4"
+        />
+      </div>
+
+      <div class="floating-icons">
+        <img src="/assets/threedot.png" alt="Icon 1" class="icon icon-1" />
+        <img src="/assets/letter.png" alt="Icon 2" class="icon icon-2" />
+
+        <img src="/assets/star.png" alt="Icon 3" class="icon icon-3" />
+        <img
+          src="/assets/doublecircle.png"
+          alt="Icon 3"
+          class="icon icon-round"
+        />
+        <img src="/assets/phone.png" alt="Icon 3" class="icon icon-phone" />
+        <img src="/assets/ball.png" alt="Icon 3" class="icon icon-ball" />
+        <img src="/assets/fan.png" alt="Icon 4" class="icon icon-4" />
+        <img src="/assets/doublearrow.png" alt="Icon 5" class="icon icon-5" />
+        <img src="/assets/world.png" alt="Icon 6" class="icon icon-6" />
+        <img src="/assets/threedot.png" alt="Icon 7" class="icon icon-7" />
+        <img src="/assets/aeroplane.png" alt="Icon 8" class="icon icon-8" />
+      </div>
+
+      <div class="number-logo">
+        <img src="/assets/Label.svg" alt="number-logo" />
+      </div>
+
+      <div class="stats-heading">
+        <div class="">
+          <h2 style="color: white; font-size: 40px">
+            The top engineering teams use
+            <span style="color: #27344a"> API Layer </span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <img
+            src="/assets/carddesign.svg"
+            alt="card-design"
+            class="card-image"
+          />
+          <h2>4m<span>+</span></h2>
+          <p>Developers</p>
+        </div>
+        <div class="stat-item">
+          <img
+            src="/assets/carddesign.svg"
+            alt="card-design"
+            class="card-image"
+          />
+          <h2>40k<span>+</span></h2>
+          <p>APIs in the Hub</p>
+        </div>
+        <div class="stat-item">
+          <img
+            src="/assets/carddesign.svg"
+            alt="card-design"
+            class="card-image"
+          />
+          <h2>5b<span>+</span></h2>
+          <p>API calls per month</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="second-part">
+      <div class="api-container">
+        <div class="header-container">
+          <img src="/assets/colorlabel.svg" alt="label" class="label-image" />
+          <div class="title-section">
+            <div class="text-content">
+              <h1>Seamlessly and natively integrated with</h1>
+              <p>
+                Unlock the full potential of your platform with seamless, native
+                integration that ensures optimal performance.
+              </p>
+            </div>
+            <a href="#" class="browse-button"
+              >Browse all APIs
+              <img src="/assets/blueright.svg" />
+            </a>
+          </div>
+        </div>
+
+        <div class="api-grid">
+          <div class="api-logo">
+            <img src="/assets/logoone.svg" alt="API Logo 1" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logotwo.svg" alt="API Logo 2" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logothree.svg" alt="API Logo 3" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logofour.svg" alt="API Logo 4" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logofive.svg" alt="API Logo 5" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logosix.svg" alt="API Logo 6" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logoseven.svg" alt="API Logo 7" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logoeight.svg" alt="API Logo 8" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logonine.svg" alt="API Logo 9" />
+          </div>
+          <div class="api-logo">
+            <img src="assets/logoten.svg" alt="API Logo 10" />
+          </div>
+          <div class="api-logo">
+            <img src="assets/logoeleven.svg" alt="API Logo 11" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logotwelve.svg" alt="API Logo 12" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logogtherteen.svg" alt="API Logo 13" />
+          </div>
+          <div class="api-logo">
+            <img src="/assets/logofourteen.svg" alt="API Logo 14" />
+          </div>
+        </div>
+
+        <div class="group-section">
+          <div style="margin-bottom: 20px">
+            <img src="/assets/marketplace.svg" />
+          </div>
+          <h2>
+            Grouping the APIs based on
+            <span style="color: #0052cc"> business needs </span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="Featured-container">
+        <header class="Feature-main-header">
+          <div class="Feature-main-header-container">
+            <div class="Feature-header-content">
+              <div class="logo">
+                <img
+                  src="/assets/featurelabel.svg"
+                  alt="Logo"
+                  class="Feature-logo-image"
+                />
+              </div>
+              <div class="fav-button">
+                <button class="fav-browse-api-btn">
+                  Browse all API
+                  <img src="/assets/blueright.svg" alt="blue-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="Feature-header-border"></div>
+
+        <div class="Feature-hero-main-heading">
+          <h1>Ipstack</h1>
+        </div>
+
+        <section class="Feature-hero-section">
+          <div class="Feature-hero-container">
+            <div class="Feature-hero-content">
+              <img
+                src="/assets/ipstackcard.png"
+                alt="Overlay Image"
+                class="overlay-image"
+              />
+            </div>
+          </div>
+          <div class="Feature-hero-subheading">
+            <h2>
+              Locate and Identify Website Visitors by
+              <span style="color: #0052cc"> IP Address </span>
+            </h2>
+          </div>
+        </section>
+
+        <section class="Feature-Ipcard-section">
+          <div class="feature-left-content">
+            <div class="feature-tag">FIND WHAT YOU NEED</div>
+            <div class="feature-main-title">
+              <h2>
+                IPstack Offers the Leading<br />
+                IP to Geolocation APIs<br />
+                and Global IP Database<br />
+                Services Worldwide.
+              </h2>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="code-content">
+              <div class="type-declaration">
+                <img
+                  src="/assets/ipcard.svg"
+                  alt="Type Declaration"
+                  class="type-image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="Feature-ipstack">
+          <div class="feature-ipstack-heading">
+            <h2>Why use <span style="color: #8c8c8c">IPstack</span></h2>
+          </div>
+          <div class="Feature-ipstack-section">
+            <div class="feature-ipstack-left-content">
+              <img src="/assets/integrationcard.svg" alt="Integration" />
+              <p class="feature-text">
+                Easy Integration:
+                <span style="color: #8c8c8c">
+                  Simple API setup with detailed documentation.
+                </span>
+              </p>
+            </div>
+            <div class="feature-ipstack-right-content">
+              <img src="/assets/location.png" alt="Location" />
+              <p class="feature-text">
+                Personalization:
+                <span style="color: #8c8c8c">
+                  Tailor content and services based on user location.
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-use-cases-section">
+          <div class="feature-use-cases-container">
+            <div class="feature-use-cases-left">
+              <div class="tag">USE CASES</div>
+              <h2 class="feature-use-cases-title">
+                Discover Powerful Use Cases
+              </h2>
+              <p class="feature-use-cases-description">
+                Learn how IPstack's advanced IP geolocation technology can
+                transform your business with innovative use cases and
+                data-driven insights.
+              </p>
+              <ul class="feature-use-case-list">
+                <li>
+                  Case title 1
+                  <img
+                    src="/assets/whitearrow.svg"
+                    alt="Arrow Icon"
+                    class="icon-placeholder"
+                  />
+                </li>
+                <li>
+                  Case title 2
+                  <img
+                    src="/assets/whitearrow.svg"
+                    alt="Arrow Icon"
+                    class="icon-placeholder"
+                  />
+                </li>
+                <li>
+                  Case title 3
+                  <img
+                    src="/assets/whitearrow.svg"
+                    alt="Arrow Icon"
+                    class="icon-placeholder"
+                  />
+                </li>
+                <li>
+                  Case title 4
+                  <img
+                    src="/assets/whitearrow.svg"
+                    alt="Arrow Icon"
+                    class="icon-placeholder"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="feature-use-cases-right">
+              <img src="/assets/ecomerececard.png" alt="Geolocation Use Case" />
+              <p class="use-cases-right-text">
+                Websites and applications can use IPstack's IP geolocation API
+                to deliver personalized content based on the user's location.
+                This enhances the user experience by providing relevant content,
+                increasing engagement, and potentially boosting conversion
+                rates.
+              </p>
+            </div>
+          </div>
+          <div class="use-cases-button">
+            <button>
+              Try IPstack
+              <img src="/assets/blueright.svg" />
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <div class="container">
+        <div class="container-row">
+          <div class="col">
+            <div>
+              <h2>Essentials</h2>
+              <p>
+                Discover essential APIs that every business needs. We've
+                handpicked these APIs to ensure you have the foundational tools
+                to power your operations, from communication to data management.
+              </p>
+              <a href="#" class="btn-card-essential"
+                >Browse all Essentials <img src="/assets/blueright.svg"
+              /></a>
+            </div>
+
+            <div class="essential-card-container">
+              <div>
+                <img src="/assets/start.svg" />
+              </div>
+              <div class="card-grid">
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/fixer.svg" alt="fiex-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Fixer</div>
+                    <div class="card-subtitle">CURRENCY</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/currencylayer.svg" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Currencylayer</div>
+                    <div class="card-subtitle">SCRAPING</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/serpstack.svg" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Serpstack</div>
+                    <div class="card-subtitle">SEO</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/media.png" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Mediastack</div>
+                    <div class="card-subtitle">SEO</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/positionstack.png" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Positionstack</div>
+                    <div class="card-subtitle">SEO</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/ipstack.png" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Ipstack</div>
+                    <div class="card-subtitle">SCRAPING</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/wifi.svg" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Ipapi</div>
+                    <div class="card-subtitle">COMMUNICATION</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/phonebook.svg" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Phonestack</div>
+                    <div class="card-subtitle">COMMUNICATION</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon-placeholder">
+                    <img src="/assets/userstack.png" alt="currency-icon" />
+                  </div>
+                  <div>
+                    <div class="card-title">Userstack</div>
+                    <div class="card-subtitle">CURRENCY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vertical-line">
+            <img src="/assets/verticalLine.svg" alt="Vertical Line" />
+          </div>
+
+          <div class="col">
+            <div>
+              <h2>By speciality</h2>
+              <p>
+                Find the right API tailored to your specific business needs.
+                We've organized our APIs by speciality so you can quickly locate
+                the tools that best fit your industry or project.
+              </p>
+              <a href="#" class="btn-grid-specialty"
+                >Browse by speciality
+                <img src="/assets/blueright.svg" />
+              </a>
+            </div>
+
+            <div class="speciality-card-container">
+              <div>
+                <img src="/assets/category.svg" />
+              </div>
+              <div class="category-grid">
+                <div class="category-card">
+                  <div class="category-title">Marketing</div>
+                  <div class="category-count">45 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Dev Tools</div>
+                  <div class="category-count">58 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Languages</div>
+                  <div class="category-count">6 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Calendar</div>
+                  <div class="category-count">14 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Business</div>
+                  <div class="category-count">3 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Communication</div>
+                  <div class="category-count">4 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Images</div>
+                  <div class="category-count">4 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Geo</div>
+                  <div class="category-count">32 APIs</div>
+                </div>
+                <div class="category-card">
+                  <div class="category-title">Jobs</div>
+                  <div class="category-count">32 APIs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="powerful-api">
+        <div class="powerful-api-card">
+          <div class="powerful-api-left-section">
+            <h1>
+              Powerful APIs.<br />Effortless Integration.<br />Unlimited
+              Possibilities.
+            </h1>
+            <p>Stay ahead in the world of APIs with our latest blog posts.</p>
+            <button>
+              Browse all APIs
+              <span>
+                <img src="/assets/blueright.svg" />
+              </span>
+            </button>
+          </div>
+          <div class="powerful-api-right-section">
+            <div class="api-wrapper">
+              <div class="api-item1">
+                <img class="icon1" src="/assets/threedot.png" />
+                <span>coinlayer</span>
+              </div>
+              <div class="api-item2">
+                <img class="icon2" src="/assets/star.png" />
+                <span>currencylayer</span>
+              </div>
+              <div class="api-item3">
+                <img class="icon3" src="/assets/world.png" />
+                <span>Ipstack</span>
+              </div>
+            </div>
+            <div class="api-wrapper2">
+              <div class="api-itemone">
+                <img class="iconone" src="/assets/fan.png" />
+                <span>Pdflayer</span>
+              </div>
+            </div>
+
+            <div class="api-wrapper3">
+              <div class="api-wraper-box">
+                <img class="wrap3iconone" src="/assets/doublearrow.png" />
+                <span>codedetection</span>
+              </div>
+              <div class="api-wraper-boxtwo">
+                <img class="wrap3icontwo" src="/assets/letter.png" />
+                <span>serpstack</span>
+              </div>
+              <div class="api-wraper-boxthree">
+                <img class="wrap3iconthree" src="/assets/newfixer.svg" />
+                <span>fixer</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="insights-section">
+         
+        <div class="insights-container">
+          <span class="insights-clients-tag">HEAR FROM CLIENTS</span> 
+          <header class="insights-header">
+              <h1>Insights & Innovations</h1>
+              <p>Stay ahead in the world of APIs with our latest blog posts. From best practices and emerging trends to crucial security tips, our experts share valuable insights to help you maximize the potential of your API solutions.</p>
+          </header>
+          <div class=" insights-content-wrapper">
+              <div class="insights-navigation">
+                  <button class="insights-nav-button" onclick="changeSlide(-1)">←</button>
+                  <button class="insights-nav-button" onclick="changeSlide(1)">→</button>
+              </div>
+              <div class="insights-card-container" id="cardContainer">
+                  <div class="insights-card" onclick="selectCard(0)">
+                      <span class="insights-card-tag">NEWS</span>
+                      <h2>Maximizing API Efficiency: Best Practices for Developers</h2>
+                      <p class="insights-card-date">July 1, 2024</p>
+                      <a href="#" class="insights-card-link">Read more</a>
+                  </div>
+                  <div class="insights-card" onclick="selectCard(1)">
+                      <span class="insights-card-tag">NEWS</span>
+                      <h2>The Future of Data Integration: Trends to Watch in 2024</h2>
+                      <p class="card-date">August 7, 2024</p>
+                      <a href="#" class="insights-card-link">Read more</a>
+                  </div>
+                  <div class="insights-card" onclick="selectCard(2)">
+                      <span class="insights-card-tag">NEWS</span>
+                      <h2>APIs and Security: How to Safeguard Your Data</h2>
+                      <p class="insights-card-date">August 12, 2024</p>
+                      <a href="#" class="insights-card-link">Read more</a>
+                  </div>
+              </div>
+              <div class="insights-slider-container">
+                  <div class="insights-slider-fill" id="sliderFill"></div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+      </section>
+
+    </section>
+
+    <footer>
+      <div class="footer-header">
+        <div class="logo-container">
+          <img alt="API Layer Logo" class="logo" src="/assets/footerlogo.svg" />
+        </div>
+        <a href="#" class="browse-btn"
+          >Browse All API's
+          <img src="/assets/blueright.svg" />
+        </a>
+      </div>
+
+      <div class="content-grid">
+        <div>
+          <h3>Sitemap</h3>
+          <div class="sitemap-lists">
+            <ul class="sitemap-list">
+              <li><a href="#">APILayer</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <ul class="sitemap-list">
+              <li><a href="#">API Glossary</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Contact Sales</a></li>
+              <li><a href="#">Helpdesk</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <div class="social-links">
+            <div class="icon-box">
+              <img src="/assets/insta.svg" alt="foter-social-icon" />
+            </div>
+            <div class="icon-box">
+              <img src="/assets/fb.svg" alt="foter-social-icon" />
+            </div>
+            <div class="icon-box">
+              <img src="/assets/linkedin.svg" alt="foter-social-icon" />
+            </div>
+            <div class="icon-box">
+              <img src="/assets/twitter.svg" alt="foter-social-icon" />
+            </div>
+            <div class="icon-box">
+              <img src="/assets/ytube.svg" alt="foter-social-icon" />
+            </div>
+            <div class="icon-box">
+              <img src="/assets/footergithub.svg" alt="foter-social-icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter">
+          <h3>Newsletter</h3>
+          <p>
+            Join our newsletter to receive the latest API insights, tips, and
+            updates straight to your inbox.
+          </p>
+          <form class="newsletter-form">
+            <input class="newsletter-input" placeholder="Email" type="email" />
+
+            <button class="subscribe-btn" type="submit">
+              Subscribe
+              <img src="/assets/whitearrow.svg" class="subscribe-arrow" />
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 All rights reserved</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Imprint</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

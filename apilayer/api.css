@@ -1,0 +1,143 @@
+.api-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    /* overflow-x: hidden */
+}
+
+/* Title Section */
+.header-container {
+    /* Container for both image and title section */
+    margin-bottom: 20px;
+}
+.label-image {
+    padding: 0 50px;
+    margin-bottom: -20px; /* Adjust this value to reduce gap */
+    /* OR use a negative margin if needed */
+}
+
+.title-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+
+
+.title-section h1 {
+    font-size: 2.5rem;
+    color: #2e3a59;
+    margin: 0;
+    max-width: 550px;
+}
+
+.title-section .text-content p {
+ margin-top: 10px;
+    font-size: 1.2rem;
+    color: #6c7a92;
+    
+}
+
+.browse-button {
+    padding: 10px 25px;
+    background-color:white;
+    color:#2e3a59;
+    text-decoration: none;
+    border-radius: 5px;
+    justify-self: end;
+}
+
+/* API Logo Grid */
+.api-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.api-logo {
+    width: 100%; /* Change from fixed width to responsive */
+    aspect-ratio: 1; /* This maintains square shape */
+    max-width: 180px; /* Add maximum width limit */
+    height: auto; /* Remove fixed height */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.api-logo img {
+    max-width: 60%;
+}
+
+/* Group Section */
+.group-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+
+.group-section h2 {
+    font-size: 35px;
+    color: #27344A;
+    width: 450px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .api-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .title-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .title-section p {
+        font-size: 1rem;
+    }
+
+    .browse-button {
+        padding: 8px 20px;
+    }
+
+    .api-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .api-logo {
+        max-width: 150px; /* Adjust maximum width for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .title-section {
+        grid-template-columns: 1fr;
+    }
+
+    .browse-button {
+        justify-self: start;
+        margin-top: 10px;
+    }
+
+    .api-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .api-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .api-logo img {
+        max-width: 40%;
+    }
+}
+
+
+
