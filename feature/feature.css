@@ -63,7 +63,7 @@
     position: relative;
     width: 100%;
    height: 300px;
-    background-image: url('/assets/bglines.svg');
+    background-image: url('../apilayer/assets/bglines.svg');
     background-size: cover;
     background-position: center;
     margin-top: 100px;
@@ -85,15 +85,14 @@
 
 
 .Feature-Ipcard-section {
-   position: relative;
-   width: 100%;
-   height: 400px;
-   padding: 0px 100px;
-   display: flex;
-   margin: 0 auto;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 100px 100px;
+    display: flex;
+    flex-direction: row; /* Desktop: image on the right */
+    justify-content: space-between;
+    align-items: center;
 }
 .feature-left-content {
     flex: 1;
@@ -161,7 +160,7 @@
     font-size: 2.5rem;
 }
 /* Responsive adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .Feature-ipstack-section {
         flex-direction: column;
     }
@@ -172,7 +171,7 @@
     }
 }
 
-
+ */
 
 
 /* Use Cases Section */
@@ -184,11 +183,23 @@
 .feature-use-cases-container {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 50px;
 }
 
-.feature-use-cases-left,
+.feature-use-cases-left {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: block;
+    justify-content: space-between;
+    min-height: 456px;
+}
 .feature-use-cases-right {
     background-color: #ffffff;
     padding: 30px;
@@ -235,17 +246,29 @@
     margin: 0;
     flex-grow: 1;
 }
-
+ 
 .feature-use-case-list li {
     font-size: 1rem;
     margin-bottom: 15px;
     padding: 8px 0px;
     color: #ffffff;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between; /* Ensure title and arrow are separated */
-    align-items: center;
     border-bottom: 1px solid white;
+}
+.feature-use-cases-left .feature-use-case-list {
+    display: block;
+}
+
+/* Right section specific styling */
+.feature-use-cases-right .feature-use-case-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-use-cases-right .feature-use-case-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -280,28 +303,281 @@
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
+/* accordion  */
 
+.accordion-title {
+    cursor: pointer;
+    padding: 0px;
+    width: 100%; /* Full width */
+    border-bottom: none; /* To avoid double borders */
+  }
 
+  .accordion-title:last-child {
+    border-bottom: 1px solid #ddd; /* Add bottom border to last item */
+  }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .use-cases-container {
-        flex-direction: column;
+  /* Icon styling */
+  .icon-placeholder {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s;
+    float: right; /* Align icon to the right */
+  }
+
+  /* Rotate the arrow icon when active */
+  .accordion-title.active .icon-placeholder {
+    transform: rotate(90deg);
+  }
+  .accordion-content {
+    display: none;
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 100% !important; /* Full width to match title */
+  }
+
+  /* Active Accordion Content */
+  .accordion-content.show {
+    display: block;
+  }
+  @media (max-width: 1024px) {
+    /* Adjust padding and layout for 1024px */
+    .Feature-main-header {
+        
+        padding: 20px 20px ;
+        text-align: left;
+    }
+
+    .Feature-header-content {
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
     }
 
-    .use-cases-left,
-    .use-cases-right {
-        width: 100%;
+    .fav-browse-api-btn {
+        margin-top: 10px; /* Add spacing above button */
     }
-}
 
+    .Feature-hero-main-heading {
+        padding: 10px 50px;
+    }
 
+    .Feature-hero-section {
+        margin-top: 50px;
+        height: 250px;
+        background-size: cover;
+    }
 
+    .overlay-image {
+        top: -100px;
+        left: 100px;
+    }
 
+    .Feature-hero-subheading h2 {
+        right: 10%;
+        width: 100%;
+        font-size: 1.8rem;
+    }
 
-@media screen and (max-width: 1340px) { 
-    .Featured-container {
+    .Feature-Ipcard-section {
+        flex-direction: column-reverse; /* Mobile: image on top */
+        padding: 0px 20px;
+        text-align: center;
+    }
+
+    .feature-left-content,
+    .right-content {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .Feature-ipstack-section {
+        padding: 0px 50px;
+        gap: 30px;
+        flex-direction: column;
+    }
+    .Feature-header-content .fav-browse-api-btn {
+        display: none;
+    }
+
+    /* Display the button after .feature-ipstack-right-content */
+    .feature-use-cases-section {
+        padding: 30px 20px;
+    }
+
+    /* Make containers stack vertically */
+    .feature-use-cases-container {
+        flex-direction: column;
+        gap: 20px; /* Space between stacked items */
+    }
+
+    .feature-use-cases-left,
+    .feature-use-cases-right {
+        width: 100%;
         max-width: 100%;
     }
+    .feature-ipstack-heading h2 {
+        font-size: 2rem; /* Optional: adjust font size for responsiveness */
+    }
+
+    .feature-ipstack-heading h2::after {
+        content: "";
+        display: block;
+    }
+
+    .feature-ipstack-heading h2 span {
+        display: inline-block;
+        margin-top: 5px; /* Optional: add space between lines */
+    }
+    .feature-ipstack-left-content img {
+        width: 400%; /* Increase the size as needed */
+        max-width: none; /* Remove max-width constraint if set */
+    }
+    .feature-ipstack-right-content img {
+        width: 400%; /* Increase the size as needed */
+        max-width: none; /* Remove max-width constraint if set */
+    }
+   
+    .feature-text {
+        color: white;
+        font-size: 1rem;
+        text-align: left;            /* Align text to the left */
+        white-space: nowrap; 
+        padding-left: 20px;           /* Prevent text from wrapping */
+        overflow: hidden;            /* Hide any overflow if needed */   
+    }
 }
+
+@media (max-width: 768px) {    
+    .feature-text {
+        color: white;
+        font-size: 1rem;
+        text-align: left;   
+        padding-left: 20px;         
+        white-space: nowrap;         /* Prevent text from wrapping */
+        overflow: hidden;            /* Hide any overflow if needed */
+    }
+    /* Adjust layout for 768px */
+    .feature-ipstack-left-content img {
+        width: 400%; /* Increase the size as needed */
+        max-width: none; /* Remove max-width constraint if set */
+    }
+    .feature-ipstack-right-content img {
+        width: 400%; /* Increase the size as needed */
+        max-width: none; /* Remove max-width constraint if set */
+    }
+    .feature-ipstack-heading h2 {
+        font-size: 2rem; /* Optional: adjust font size for responsiveness */
+        
+        
+    }
+
+    .feature-ipstack-heading h2::after {
+        content: "";
+        display: block;
+        
+    }
+
+    .feature-ipstack-heading h2 span {
+        display: inline-block;
+        margin-top: 5px; /* Optional: add space between lines */
+        
+    }
+
+    .Feature-main-header {
+        padding: 15px 20px;
+    }
+    
+    .Feature-header-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .fav-browse-api-btn {
+        margin-top: 10px; /* Add spacing above button */
+    }
+
+    .Feature-hero-main-heading {
+        padding: 10px 20px;
+    }
+
+    .Feature-hero-section {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .Feature-hero-subheading h2 {
+        font-size: 1.5rem;
+        top: 150px;
+        right: 5%;
+        width: 80%;
+    }
+
+    .overlay-image {
+        top: -80px;
+        left: 50px;
+        width: 70%;
+    }
+
+    .Feature-Ipcard-section {
+        padding: 0px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-left-content,
+    .right-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Feature-ipstack-section,
+    .feature-use-cases-container {
+        padding: 0px 20px;
+        flex-direction: column;
+    }
+    .feature-use-cases-section {
+        padding: 30px 20px;
+    }
+
+    /* Make containers stack vertically */
+    .feature-use-cases-container {
+        flex-direction: column;
+        gap: 20px; /* Space between stacked items */
+    }
+
+    .feature-use-cases-left,
+    .feature-use-cases-right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .feature-ipstack-left-content,
+    .feature-ipstack-right-content,
+    .feature-use-cases-left,
+    .feature-use-cases-right {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .accordion-title {
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        width: 100%;
+    }
+
+    .use-cases-button button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+
+

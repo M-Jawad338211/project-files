@@ -101,10 +101,10 @@
             </div>
           </div>
         </section>
-
+        
         <section class="feature-use-cases-section">
           <div class="feature-use-cases-container">
-            <div class="feature-use-cases-left">
+            <!-- <div class="feature-use-cases-left">
               <div class="tag">USE CASES</div>
               <h2 class="feature-use-cases-title">
                 Discover Powerful Use Cases
@@ -148,7 +148,62 @@
                   />
                 </li>
               </ul>
+            </div> -->
+            <div class="feature-use-cases-left">
+              <div class="tag">USE CASES</div>
+              <h2 class="feature-use-cases-title">Discover Powerful Use Cases</h2>
+              <p class="feature-use-cases-description">
+                Learn how IPstack's advanced IP geolocation technology can transform your business with innovative use cases and data-driven insights.
+              </p>
+              <ul class="feature-use-case-list">
+                <li>
+                  <div onclick="toggleAccordion('case1')" class="accordion-title">
+                    Case title 1
+                    <img src="/apilayer/assets/whitearrow.svg" alt="Arrow Icon" class="icon-placeholder" />
+                  </div>
+                  <div id="case1" class="accordion-content">
+                    <p>Content for case title 1. Line 1.</p>
+                    <p>Line 2.</p>
+                    <p>Line 3.</p>
+                  </div>
+                </li>
+                <li>
+                  <div onclick="toggleAccordion('case2')" class="accordion-title">
+                    Case title 2
+                    <img src="/apilayer/assets/whitearrow.svg" alt="Arrow Icon" class="icon-placeholder" />
+                  </div>
+                  <div id="case2" class="accordion-content">
+                    <p>Content for case title 2. Line 1.</p>
+                    <p>Line 2.</p>
+                    <p>Line 3.</p>
+                  </div>
+                </li>
+                <li>
+                  <div onclick="toggleAccordion('case3')" class="accordion-title">
+                    Case title 3
+                    <img src="/apilayer/assets/whitearrow.svg" alt="Arrow Icon" class="icon-placeholder" />
+                  </div>
+                  <div id="case3" class="accordion-content">
+                    <p>Content for case title 3. Line 1.</p>
+                    <p>Line 2.</p>
+                    <p>Line 3.</p>
+                  </div>
+                </li>
+                <li>
+                  <div onclick="toggleAccordion('case4')" class="accordion-title">
+                    Case title 4
+                    <img src="/apilayer/assets/whitearrow.svg" alt="Arrow Icon" class="icon-placeholder" />
+                  </div>
+                  <div id="case4" class="accordion-content">
+                    <p>Content for case title 4. Line 1.</p>
+                    <p>Line 2.</p>
+                    <p>Line 3.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
+            
+                     
             <div class="feature-use-cases-right">
               <img src="/apilayer/assets/ecomerececard.png" alt="Geolocation Use Case" />
               <p class="use-cases-right-text">
@@ -168,5 +223,37 @@
           </div>
         </section>
       </div>
+      <!-- javascript -->
+      <script>
+        function toggleAccordion(caseId) {
+          const allAccordions = document.querySelectorAll('.accordion-content');
+          const allTitles = document.querySelectorAll('.accordion-title');
+      
+          allAccordions.forEach((accordion) => {
+            if (accordion.id === caseId) {
+              if (accordion.style.display === "block") {
+                accordion.style.display = "none";
+                accordion.classList.remove('show');
+              } else {
+                accordion.style.display = "block";
+                accordion.classList.add('show');
+              }
+            } else {
+              accordion.style.display = "none";
+              accordion.classList.remove('show');
+            }
+          });
+      
+          allTitles.forEach((title) => {
+            if (title.parentNode.querySelector('.accordion-content').id === caseId) {
+              title.classList.toggle('active');
+            } else {
+              title.classList.remove('active');
+            }
+          });
+        }
+      </script>
+      
+      
 </body>
 </html>
